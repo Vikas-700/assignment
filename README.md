@@ -1,4 +1,4 @@
-# Web Stories Full-Stack Project
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4d4c39e6-b06c-4fed-a0cc-97259cfe0894" /># Web Stories Full-Stack Project
 
 A full-stack web application for creating, managing, and viewing web stories, similar to Instagram or Google Web Stories. This project includes an Admin CMS for managing stories and a Frontend Player for displaying them.
 
@@ -88,4 +88,27 @@ Frontend runs at `http://localhost:3000`.
 
 ## Folder Structure
 <img width="477" height="482" alt="Image" src="https://github.com/user-attachments/assets/70cf77fa-ae70-4126-8d19-f03b516e0595" />
+
+
+## Screenshots
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/88df3aeb-e231-46a6-8245-068dc0201200" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/0691251d-61ba-4392-916b-728b094642dd" />
+
+## Notes
+
+- Ensure Cloudinary API keys are correct and match your .env.
+- Uploaded images are cropped to 400x700 for portrait style. Videos are uploaded without transformations.
+- Mobile-friendly design for story playback.
+
+## Future Improvements
+
+- User authentication for admin access.
+- Category-based story filtering.
+- Slide animations and transitions.
+- Story scheduling and expiration.
+
+## License
+
+MIT License
+
 

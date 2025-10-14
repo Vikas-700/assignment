@@ -87,33 +87,5 @@ Frontend runs at `http://localhost:3000`.
 | DELETE | /api/stories/:id   | Delete a story         |
 
 ## Folder Structure
-
-backend/
-├── controllers/
-│   └── storyController.js
-├── models/
-│   └── storyModel.js
-├── routes/
-│   └── storyRoutes.js
-├── uploads/
-├── cloudinary.js
-├── server.js
-├── package.json
-└── .env
-
-frontend/
-├── src/
-│   ├── pages/
-│   │   ├── Dashboard.js
-│   │   ├── StoryPlayer.js
-│   │   └── StoryDetail.js
-│   ├── components/
-│   │   ├── StoryForm.js
-│   │   └── StoryTable.js
-│   ├── api/
-│   │   └── storyApi.js
-│   └── App.js
-├── package.json
-└── public/
-
+<img width="477" height="482" alt="Image" src="https://github.com/user-attachments/assets/70cf77fa-ae70-4126-8d19-f03b516e0595" />
 

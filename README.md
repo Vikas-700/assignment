@@ -40,5 +40,11 @@ A full-stack web application for creating, managing, and viewing web stories, si
 
 ### Backend
 
-1. Clone the repository:
+1. Clone the repository:  
+` git clone <repo-url>`  
+` cd backend`
+2. Install dependencies:  
+  ` npm install`
+
+
 

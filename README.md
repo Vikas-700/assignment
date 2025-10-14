@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4d4c39e6-b06c-4fed-a0cc-97259cfe0894" /># Web Stories Full-Stack Project
+# Web Stories Full-Stack Project
 
 A full-stack web application for creating, managing, and viewing web stories, similar to Instagram or Google Web Stories. This project includes an Admin CMS for managing stories and a Frontend Player for displaying them.
 

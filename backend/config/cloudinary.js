@@ -11,16 +11,25 @@ cloudinary.config({
 
 const uploadOnCloudinary = async (filePath) => {
   try {
-    const result = await cloudinary.uploader.upload(filePath, {
-      resource_type: "auto",
-      folder: "stories",      // optional: organize files
-      width: 400,             // portrait width
-      height: 700,            // portrait height
-      crop: "fill",           // crop to fill frame
-      gravity: "auto"         // auto-center important part
-    });
+    // Check if file is video
+    const isVideo = filePath.match(/\.(mp4|mov|avi|mkv|webm)$/i);
 
-    fs.unlinkSync(filePath);  // remove temp file
+    const uploadOptions = {
+      resource_type: isVideo ? "video" : "image",
+      folder: "stories",
+    };
+
+    // Apply transformations only for images
+    if (!isVideo) {
+      uploadOptions.width = 400;
+      uploadOptions.height = 700;
+      uploadOptions.crop = "fill";
+      uploadOptions.gravity = "auto";
+    }
+
+    const result = await cloudinary.uploader.upload(filePath, uploadOptions);
+
+    fs.unlinkSync(filePath); // remove temporary file after upload
     return result.secure_url;
   } catch (error) {
     console.error("Cloudinary upload failed:", error);

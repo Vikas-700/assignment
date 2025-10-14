@@ -46,5 +46,14 @@ A full-stack web application for creating, managing, and viewing web stories, si
 2. Install dependencies:  
   ` npm install`
 
+Create a `.env` file:  
+`PORT=5000  
+MONGO_URI=<your-mongodb-uri>  
+CLOUD_NAME=<cloudinary-cloud-name>  
+API_KEY=<cloudinary-api-key>  
+API_SECRET=<cloudinary-api-secret>`  
 
+4. Start the server:
+   `npm run dev`
+   
 

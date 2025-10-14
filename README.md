@@ -47,13 +47,73 @@ A full-stack web application for creating, managing, and viewing web stories, si
   ` npm install`
 
 Create a `.env` file:  
-`PORT=5000  
+PORT=5000  
 MONGO_URI=<your-mongodb-uri>  
 CLOUD_NAME=<cloudinary-cloud-name>  
 API_KEY=<cloudinary-api-key>  
-API_SECRET=<cloudinary-api-secret>`  
+API_SECRET=<cloudinary-api-secret>  
 
 4. Start the server:
    `npm run dev`
-   
+Backend runs at `http://localhost:5000`.
+
+### Frontend
+
+Backend runs at `http://localhost:5000`.
+
+### Frontend
+
+1. Navigate to the frontend directory:
+`cd frontend`
+
+
+2. Install dependencies:
+`npm install`
+
+3. Start the frontend:
+`npm start`
+
+
+Frontend runs at `http://localhost:3000`.
+
+## API Endpoints
+
+| Method | Endpoint           | Description            |
+|--------|--------------------|------------------------|
+| GET    | /api/stories       | Get all stories        |
+| GET    | /api/stories/:id   | Get a single story by ID |
+| POST   | /api/stories       | Create a new story     |
+| PUT    | /api/stories/:id   | Update a story         |
+| DELETE | /api/stories/:id   | Delete a story         |
+
+## Folder Structure
+
+backend/
+├── controllers/
+│   └── storyController.js
+├── models/
+│   └── storyModel.js
+├── routes/
+│   └── storyRoutes.js
+├── uploads/
+├── cloudinary.js
+├── server.js
+├── package.json
+└── .env
+
+frontend/
+├── src/
+│   ├── pages/
+│   │   ├── Dashboard.js
+│   │   ├── StoryPlayer.js
+│   │   └── StoryDetail.js
+│   ├── components/
+│   │   ├── StoryForm.js
+│   │   └── StoryTable.js
+│   ├── api/
+│   │   └── storyApi.js
+│   └── App.js
+├── package.json
+└── public/
+
 

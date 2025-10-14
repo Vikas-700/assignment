@@ -35,6 +35,8 @@ A full-stack web application for creating, managing, and viewing web stories, si
 - Multer (file uploads)
 - Cloudinary (media storage)
   <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/99940b0f-a767-4c12-a4bf-8482a9074720" />
+### Manually check  API is working or Not
+  <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/7cba3e8a-13e5-479f-85f6-81600dbb85e1" />
 
 ## Installation
 

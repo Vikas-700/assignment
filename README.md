@@ -48,7 +48,7 @@ A full-stack web application for creating, managing, and viewing web stories, si
 2. Install dependencies:  
   ` npm install`
 
-Create a `.env` file:  
+Create a `.env` file:   
 PORT=5000  
 MONGO_URI=<your-mongodb-uri>  
 CLOUD_NAME=<cloudinary-cloud-name>  
@@ -112,5 +112,5 @@ Frontend runs at `http://localhost:3000`.
 ## License
 
 MIT License
-
+ re
 

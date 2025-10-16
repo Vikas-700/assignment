@@ -6,7 +6,7 @@ const StoryList = () => {
 
   useEffect(() => {
     const fetchStories = async () => {
-      const res = await axios.get("http://localhost:5000/api/stories");
+      const res = await axios.get("https://assignment-backend-y2od.onrender.com/api/stories");
       setStories(res.data);
     };
     fetchStories();

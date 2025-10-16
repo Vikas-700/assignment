@@ -31,7 +31,7 @@ const StoryPlayer = () => {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/stories");
+        const res = await axios.get("https://assignment-backend-y2od.onrender.com/api/stories");
         setStories(res.data);
       } catch (error) {
         console.error("Error fetching stories:", error);

@@ -1,19 +1,23 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/desbord";
-import StoryPlayer from "./pages/storyplayer"; // list of stories
-import StoryDetail from "./pages/storydetail"; 
-import Navbar from "./components/navwar";// create this
+import StoryPlayer from "./pages/storyplayer";
+import Navbar from "./components/navwar";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-    <Navbar/>
+      <Navbar />
       <Routes>
+        {/* Admin Dashboard */}
         <Route path="/admin" element={<Dashboard />} />
+
+        {/* Homepage shows all stories */}
         <Route path="/" element={<StoryPlayer />} />
-        <Route path="/stories/:id" element={<StoryDetail />} /> {/* <-- add this */}
+
+        {/* Single story view */}
+        <Route path="/stories/:id" element={<StoryPlayer />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,32 @@
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+    padding: 8px 6px;
+  }
+
+  button {
+    font-size: 11px !important;
+    padding: 4px 6px !important;
+  }
+
+  .d-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .table th:nth-child(1),
+  .table td:nth-child(1) {
+    min-width: 80px;
+  }
+}

@@ -102,3 +102,67 @@ export const deleteStory = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
+
+
+// Like a specific slide
+export const likeSlide = async (req, res) => {
+  try {
+    const { id, slideIndex } = req.params;
+    const { userId } = req.body;
+    const story = await Story.findById(id);
+    if (!story) return res.status(404).json({ message: "Story not found" });
+
+    const slide = story.slides[slideIndex];
+    if (!slide) return res.status(404).json({ message: "Slide not found" });
+
+    const hasLiked = slide.likes.includes(userId);
+    if (hasLiked) {
+      slide.likes = slide.likes.filter((u) => u !== userId);
+    } else {
+      slide.likes.push(userId);
+    }
+
+    await story.save();
+    res.json({ likes: slide.likes });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// Comment on a specific slide
+export const commentOnSlide = async (req, res) => {
+  try {
+    const { id, slideIndex } = req.params;
+    const { user, text } = req.body;
+    const story = await Story.findById(id);
+    if (!story) return res.status(404).json({ message: "Story not found" });
+
+    const slide = story.slides[slideIndex];
+    if (!slide) return res.status(404).json({ message: "Slide not found" });
+
+    slide.comments.push({ user, text });
+    await story.save();
+    res.json({ comments: slide.comments });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// Increment view count (one per request — frontend handles one view per user)
+export const incrementSlideView = async (req, res) => {
+  try {
+    const { id, slideIndex } = req.params;
+    const story = await Story.findById(id);
+    if (!story) return res.status(404).json({ message: "Story not found" });
+
+    const slide = story.slides[slideIndex];
+    if (!slide) return res.status(404).json({ message: "Slide not found" });
+
+    slide.views += 1;
+    await story.save();
+    res.json({ views: slide.views });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+

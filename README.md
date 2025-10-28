@@ -93,8 +93,8 @@ Frontend runs at `http://localhost:3000`.
 
 
 ## Screenshots
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/88df3aeb-e231-46a6-8245-068dc0201200" />
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/0691251d-61ba-4392-916b-728b094642dd" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/1c4584d7-f872-4004-8382-9bdfd2518588" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/c8123106-967c-40f8-947d-f37491557ace" />
 
 ## Notes
 

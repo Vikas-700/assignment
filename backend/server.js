@@ -8,14 +8,18 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Middleware
+// ✅ Middleware (CORS setup)
 app.use(
   cors({
-    origin: ["http://localhost:3000"], // your React frontend URL
+    origin: [
+      "http://localhost:3000", // for local testing
+      "https://assignment-frontend-gtzd.onrender.com", // your live frontend
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -25,16 +29,10 @@ connectDB();
 // ✅ API routes
 app.use("/api/stories", storyRoutes);
 
-// ✅ Root test route (optional)
+// ✅ Root test route
 app.get("/", (req, res) => {
   res.send("Server is running ✅");
 });
-
-app.use(cors({
-  origin: "https://assignment-frontend-gtzd.onrender.com",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
 
 // ✅ Server start
 const PORT = process.env.PORT || 5000;

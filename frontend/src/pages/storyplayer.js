@@ -3,7 +3,7 @@ import axios from "axios";
 import "./StoryPlayer.css";
 
 const SLIDE_DURATION = 5000; // 5s per image
-const API_BASE = "http://localhost:5000/api/stories";
+const API_BASE = "https://assignment-backend-y2od.onrender.com/api/stories";
 const USER_ID = "vikas123"; // replace later with real user
 
 // Utility: time ago

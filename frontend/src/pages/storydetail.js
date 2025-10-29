@@ -9,7 +9,7 @@ const StoryDetail = () => {
   useEffect(() => {
     const fetchStory = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/stories/${id}`);
+        const res = await axios.get(`https://assignment-backend-y2od.onrender.com/api/stories/${id}`);
         setStory(res.data);
       } catch (err) {
         console.error(err);
